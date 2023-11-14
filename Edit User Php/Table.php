@@ -22,7 +22,8 @@ $result = mysqli_query($conn,$query);
         <th>Email</th>
         <th>Address</th>
         <th>Role</th>
-        <th>Action</th>
+        <th>Edit</th>
+        <th>Delete</th>
     </tr>
 
 
@@ -37,9 +38,33 @@ $result = mysqli_query($conn,$query);
     <td><?php echo $data["user_address"]; ?></td>
     <td><?php echo $data["role_name"]; ?></td>
     <td><a href="edit.php?id=<?php echo $data["user_id"];?>">Edit</a>
+    <td><a href="#"data-bs-toggle="modal" data-bs-target="#exampleModal"<?php echo $data["user_id"];?>">Delete</a>
     </td>
     
    </tr>
+    <!-- Button trigger modal -->
+<button type="button" class="btn btn-primary" >
+  Launch demo modal
+</button>
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="exampleModalLabel">Modal title</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        Are you sure you want to delete this record?
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <a type = "button" class="btn btn-danger" href="deleteuser.php?id=<?php echo $data["user_id"]?>">Delete</a>
+      </div>
+    </div>
+  </div>
+</div>
 
 
    <?php     
