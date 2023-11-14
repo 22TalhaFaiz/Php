@@ -1,5 +1,5 @@
 <?php
 
-$conn = mysqli_connect("localhost", "root" , "","Talhadb");
+$conn = mysqli_connect("localhost", "root" , "","talhadb");
 
 
