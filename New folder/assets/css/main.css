@@ -2671,3 +2671,14 @@ section {
 .footer .credits a {
   color: #fff;
 }
+
+.sbtn{
+  color:white;
+  background-color:#008374 ;
+  font-family: var(--font-primary);
+}
+
+.pform{
+  font-family: var(--font-primary);
+  
+}
