@@ -1,4 +1,10 @@
 <?php
+if(!isset($_SESSION['user_id'])){
+    echo "<script>location.href = 'index.php';</script>";
+    
+  }
+  else{
+
     $id = $_GET["id"];
     include("config.php");
     include("header.php");
@@ -7,6 +13,7 @@
     $user = mysqli_fetch_array($userData);
     $query = "SELECT * FROM roles";
     $result = mysqli_query($conn, $query);
+    
 ?>
 
 <!DOCTYPE html>
@@ -40,3 +47,9 @@
     </form>
 </body>
 </html>
+
+<?php
+      include("footer.php");
+            }
+
+?>
