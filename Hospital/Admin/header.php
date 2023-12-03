@@ -9,7 +9,7 @@
 
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-<title>Sales</title>
+<title>Admin </title>
 <link rel="icon" href="img/logo.png" type="image/png">
 
 <link rel="stylesheet" href="css/bootstrap1.min.css" />
@@ -69,11 +69,12 @@
 <div class="icon_menu">
 <img src="img/menu-icon/2.svg" alt>
 </div>
-<span>Add Hospital</span>
+<span>Hospital</span>
 </a>
 <ul>
-<li><a href="userlist.php">List</a></li>
-<li><a href="adduser.php">Add new</a></li>
+<li><a href="userlist.php">Hospital List</a></li>
+<li><a href="loginTable.php">LoginIds</a></li>
+<li><a href="adduser.php">New Hospital Login</a></li>
 </ul>
 </li>
 </nav>
@@ -182,15 +183,20 @@
 </li>
 </div>
 <div class="profile_info">
-<img src="img/client_img.png" alt="#">
+<img src="img/admin.jpg" alt="#">
 <div class="profile_info_iner">
 <div class="profile_author_name">
-<p>Neurologist </p>
-<h5>Dr. Robar Smith</h5>
+<?php 
+          if(isset($_SESSION['user_id'])){
+            ?>
+<h5><span><?php  echo $_SESSION['user_name']?></span></h5>
 </div>
+
 <div class="profile_info_details">
 <a href="#">My Profile </a>
 <a href="#">Settings</a>
+<?php
+}?>
 <a href="logout.php">Log Out </a>
 </div>
 </div>

@@ -7,7 +7,7 @@ if(!isset($_SESSION['user_id'])){
   else{
     include("header.php");
     include("config.php");
-    $query = "SELECT * from hospital";
+    $query = "SELECT *,u.id as user_id FROM users  u join roles r on u.role_id = r.id";
     $result = mysqli_query($conn, $query);
 ?>
 
@@ -51,10 +51,11 @@ if(!isset($_SESSION['user_id'])){
 <table class="table lms_table_active ">
 <thead>
 <tr>
-<th scope="col">Hospital Name</th>
-<th scope="col">Role id</th>
-<th scope="col">Hospital Id</th>
-
+<th scope="col">Name</th>
+<th scope="col">Email</th>
+<th scope="col">Address</th>
+<th scope="col">Role</th>
+<th scope="col">Hospital id</th>
 </tr>
 </thead>
 <tbody>
@@ -62,9 +63,12 @@ if(!isset($_SESSION['user_id'])){
         while($data = mysqli_fetch_assoc($result)){
     ?>
     <tr>
-        <td><?php echo $data["hospital_name"]; ?></td>
-        <td><?php echo $data["role_id"]; ?></td>
-        <td><?php echo $data["id"]; ?></td>
+        <td><?php echo $data["user_name"]; ?></td>
+        <td><?php echo $data["user_email"]; ?></td>
+        <td><?php echo $data["user_address"]; ?></td>
+        <td><?php echo $data["role_name"]; ?></td>
+        <td><?php echo $data["hospital_id"]; ?></td>
+
         <td><a href="#" class="status_btn">Active</a></td>
     </tr>
     <?php
