@@ -9,7 +9,7 @@
 
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-<title>Sales</title>
+<title>Movie Booking</title>
 <link rel="icon" href="img/logo.png" type="image/png">
 
 <link rel="stylesheet" href="css/bootstrap1.min.css" />
@@ -65,7 +65,7 @@
 </a>
 </li>
 <li class>
-<a class="has-arrow" href="#" aria-expanded="false">
+<a class="has-arrow" href="movielist.php" aria-expanded="false">
 <div class="icon_menu">
 <img src="img/menu-icon/2.svg" alt>
 </div>
@@ -81,11 +81,11 @@
 <div class="icon_menu">
 <img src="img/menu-icon/2.svg" alt>
 </div>
-<span>Product</span>
+<span>Theatre</span>
 </a>
 <ul>
-<li><a href="editor.html">List</a></li>
-<li><a href="mail_box.html">Add new</a></li>
+<li><a href="theatre/theatrelist.php">List</a></li>
+<li><a href="theatre/addTheatre.php">Add new</a></li>
 </ul>
 </li>
 <li class>
@@ -215,15 +215,20 @@
 </li>
 </div>
 <div class="profile_info">
-<img src="img/client_img.png" alt="#">
+<img src="img/admin.jpg" class="w-75" alt="#">
 <div class="profile_info_iner">
 <div class="profile_author_name">
-<p>Neurologist </p>
-<h5>Dr. Robar Smith</h5>
+<?php 
+          if(isset($_SESSION['user_id'])){
+            ?>
+<h5><span><?php  echo $_SESSION['user_name']?></span></h5>
 </div>
+
 <div class="profile_info_details">
 <a href="#">My Profile </a>
 <a href="#">Settings</a>
+<?php
+}?>
 <a href="logout.php">Log Out </a>
 </div>
 </div>

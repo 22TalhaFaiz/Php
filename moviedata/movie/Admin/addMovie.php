@@ -56,7 +56,7 @@ $result = mysqli_query($conn, $query);
 </div>
 </div>
 
-<input class="btn btn-warning w-100 mt-5" type="submit" name="submit">
+<input class="btn btn-dark w-100 mt-5" type="submit" name="submit">
 </form>
 </div>
 </div>

@@ -1,6 +1,7 @@
 <?php
 include ("config.php");
 if(isset($_POST['submit'])){
+
 $title = $_POST["title"];
 $Genre = $_POST["Genre"];
 $Release_date = $_POST["Release_Date"];
