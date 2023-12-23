@@ -65,7 +65,7 @@
 </a>
 </li>
 <li class>
-<a class="has-arrow" href="../movielist.php" aria-expanded="false">
+<a class="has-arrow" href="#" aria-expanded="false">
 <div class="icon_menu">
 <img src="img/menu-icon/2.svg" alt>
 </div>

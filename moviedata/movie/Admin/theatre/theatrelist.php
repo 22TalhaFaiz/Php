@@ -51,12 +51,10 @@ if(!isset($_SESSION['user_id'])){
 <table class="table lms_table_active ">
 <thead>
 <tr>
-<th scope="col">Title</th>
-<th scope="col">Poster</th>
-<th scope="col">Genre</th>
-<th scope="col">Release_Date</th>
-<th scope="col">Description</th>
-<th scope="col">Rating</th>
+<th scope="col">Theater Name</th>
+<th scope="col">Location</th>
+<th scope="col">Capacity</th>
+<th scope="col">Class</th>
 <th scope="col">Edit</th>
 <th scope="col">Delete</th>
 </tr>
@@ -66,12 +64,10 @@ if(!isset($_SESSION['user_id'])){
         while($data = mysqli_fetch_assoc($result)){
     ?>
     <tr>
-        <td><?php echo $data["title"]; ?></td>
-        <td><?php echo $data["Poster"]; ?></td>
-        <td><?php echo $data["Genre"]; ?></td>
-        <td><?php echo $data["Release_Date"]; ?></td>
-        <td><?php echo $data["Description"]; ?></td>
-        <td><?php echo $data["Rating"]; ?></td>
+        <td><?php echo $data["Theater_Name"]; ?></td>
+        <td><?php echo $data["Location"]; ?></td>
+        <td><?php echo $data["Capacity"]; ?></td>
+        <td><?php echo $data["Class"]; ?></td>
         <td><a href="edit.php?id=<?php echo $data["id"]; ?>"><i class="fa fa-pen" style="color:green;"></i></a></td>
         <td><a href="delete.php?id=<?php echo $data["id"]; ?>"><i class="fa fa-trash" aria-hidden="true" style="color:red;"></i></a></td>
     </tr>
