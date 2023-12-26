@@ -93,11 +93,11 @@
 <div class="icon_menu">
 <img src="img/menu-icon/2.svg" alt>
 </div>
-<span>Orders</span>
+<span>Showtime</span>
 </a>
 <ul>
-<li><a href="editor.html">List</a></li>
-<li><a href="mail_box.html">Add new</a></li>
+<li><a href="showtime/showtimeL.php">List</a></li>
+<li><a href="showtime/addSh.php">Add new</a></li>
 </ul>
 </li>
 <li class>

@@ -57,7 +57,7 @@
 </div>
 <ul id="sidebar_menu">
 <li class>
-<a href="../index.php" aria-expanded="false">
+<a href="index.php" aria-expanded="false">
 <div class="icon_menu">
 <img src="img/menu-icon/6.svg" alt>
 </div>
@@ -72,8 +72,8 @@
 <span>Movie</span>
 </a>
 <ul>
-<li><a href="../movielist.php">List</a></li>
-<li><a href="../addMovie.php">Add new</a></li>
+<li><a href="movielist.php">List</a></li>
+<li><a href="addMovie.php">Add new</a></li>
 </ul>
 </li>
 <li class>
@@ -84,8 +84,8 @@
 <span>Theatre</span>
 </a>
 <ul>
-<li><a href="theatrelist.php">List</a></li>
-<li><a href="addTheatre.php">Add new</a></li>
+<li><a href="theatre/theatrelist.php">List</a></li>
+<li><a href="theatre/addTheatre.php">Add new</a></li>
 </ul>
 </li>
 <li class>
@@ -96,8 +96,8 @@
 <span>Showtime</span>
 </a>
 <ul>
-<li><a href="../showtime/showtimeL.php">List</a></li>
-<li><a href="../showtime/addSh.php">Add new</a></li>
+<li><a href="showtimeL.php">List</a></li>
+<li><a href="addSh.php">Add new</a></li>
 </ul>
 </li>
 <li class>
@@ -229,7 +229,7 @@
 <a href="#">Settings</a>
 <?php
 }?>
-<a href="../logout.php">Log Out </a>
+<a href="logout.php">Log Out </a>
 </div>
 </div>
 </div>
