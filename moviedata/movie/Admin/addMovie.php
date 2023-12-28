@@ -28,6 +28,7 @@ $result = mysqli_query($conn, $query);
 
 <div class="row mb-3">
 <div class="col-md-6">
+  
 <label class="form-label" for="inputEmail4">Title</label>
 <input type="text" class="form-control" id="inputEmail4" placeholder="Title" name="title">
 </div>
@@ -58,6 +59,7 @@ $result = mysqli_query($conn, $query);
 
 <input class="btn btn-dark w-100 mt-5" type="submit" name="submit">
 </form>
+
 </div>
 </div>
 </div>
