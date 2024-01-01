@@ -7,6 +7,9 @@ $Genre = $_POST["Genre"];
 $Release_date = $_POST["Release_Date"];
 $description = $_POST["Description"];
 $Rating = $_POST["Rating"];
+$Trailer = $_POST["Trailer"];
+$runtime = $_POST["runtime"];
+
 
 $img=$_FILES["imag"];
 
@@ -18,8 +21,8 @@ $myPath= "../images/".$imgName;
 move_uploaded_file($tempPath,$myPath);
 
 
-$query = "INSERT INTO `movies`(`title`, `Genre`, `Release_Date`, `Poster`,`Description`,`Rating`) 
-VALUES ('$title','$Genre','$Release_date','$myPath','$description','$Rating')";
+$query = "INSERT INTO `movies`(`title`, `Genre`, `Release_Date`, `Poster`,`Description`,`Rating`,`Trailer`,`runtime`) 
+VALUES ('$title','$Genre','$Release_date','$imgName','$description','$Rating','$Trailer','$runtime')";
 
 $result = mysqli_query($conn , $query);
 

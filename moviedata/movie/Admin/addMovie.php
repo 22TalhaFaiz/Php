@@ -48,15 +48,21 @@ $result = mysqli_query($conn, $query);
 <div class="row mb-3">
 <div class=" col-md-6">
 <label class="form-label" for="inputCity">Rating</label>
-<input type="text" class="form-control" id="inputCity" name="Rating">
+<input type="Text" class="form-control" id="inputCity" name="Rating">
 </div>
 <div class="col-md-4">
 <label class="form-label" for="inputState">Genre</label>
 <input type="text" class="form-control" id="inputCity" name="Genre">
 </select>
 </div>
+<div class="col-md-4">
+<label class="form-label" for="inputState">Movie Trailer</label>
+<input type="url" class="form-control" id="inputCity" name="Trailer">
 </div>
-
+<div class="col-md-4">
+<label class="form-label" for="inputState">Runtime</label>
+<input type="text" class="form-control" id="inputCity" name="runtime">
+</div>
 <input class="btn btn-dark w-100 mt-5" type="submit" name="submit">
 </form>
 

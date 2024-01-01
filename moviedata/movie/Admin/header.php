@@ -25,6 +25,7 @@
 <link rel="stylesheet" href="vendors/font_awesome/css/all.min.css" />
 <link rel="stylesheet" href="vendors/tagsinput/tagsinput.css" />
 
+
 <link rel="stylesheet" href="vendors/datepicker/date-picker.css" />
 <link rel="stylesheet" href="vendors/vectormap-home/vectormap-2.0.2.css" />
 

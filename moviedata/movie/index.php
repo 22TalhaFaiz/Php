@@ -99,7 +99,7 @@ include('config.php');
  <div class="row trend_1">
   <div class="col-md-6 col-6">
    <div class="trend_1l">
-    <h4 class="mb-0"><i class="fa fa-youtube-play align-middle col_red me-1"></i> Upcoming <span class="col_red">Events</span></h4>
+    <h4 class="mb-0"><i class="fab fa-youtube-play align-middle col_red me-1"></i> Upcoming <span class="col_red">Events</span></h4>
    </div>
   </div>
   <div class="col-md-6 col-6">
@@ -127,7 +127,7 @@ include('config.php');
 	  </div>
 		   </div>
 		   <div class="trend_2im2 clearfix text-center position-absolute w-100 top-0">
-		     <span class="fs-1"><a class="col_red" href="#"><i class="fa fa-youtube-play"></i></a></span>
+		     <span class="fs-1"><a class="col_red" href="#"><i class="fab fa-youtube-play"></i></a></span>
 		   </div>
 		  </div>
 		  <div class="trend_2ilast bg_grey p-3 clearfix">
@@ -295,7 +295,7 @@ include('config.php');
  <div class="row trend_1">
   <div class="col-md-12">
    <div class="trend_1l">
-    <h4 class="mb-0"><i class="fa fa-youtube-play align-middle col_red me-1"></i> Trending <span class="col_red">Events</span></h4>
+    <h4 class="mb-0"><i class="fab fa-youtube-play align-middle col_red me-1"></i> Trending <span class="col_red">Events</span></h4>
    </div>
   </div>
  </div>
@@ -327,10 +327,10 @@ include('config.php');
  <div class="popular_2 row mt-4">
     <div class="tab-content">
         <div class="tab-pane active" id="home">
-            <div class="popular_2i row">
+            <div class="popular_2i row g-2">
                 <?php
                 $today = date("Y-m-d");
-                $qry2 = mysqli_query($conn, "select * from  movies");
+                $qry2 = mysqli_query($conn, "select * from  movies order by rand() limit 4");
 
                 while ($m = mysqli_fetch_array($qry2)) {
                 ?>
@@ -341,7 +341,7 @@ include('config.php');
                                     <div class="popular_2i1lm1 clearfix">
                                         <div class="grid">
                                             <figure class="effect-jazz mb-0">
-                                                <a href="aboutmovies.php?id=<?php echo $m['id']; ?>"><img src="<?php echo $m['Poster']; ?>" alt="" /></a>
+                                                <a href="aboutmovies.php?id=<?php echo $m['id']; ?>"><img src="./images/<?php echo $m['Poster']; ?>" class="w-100" alt="" /></a>
                                             </figure>
                                         </div>
                                     </div>
@@ -357,9 +357,9 @@ include('config.php');
                                 <div class="popular_2i1r">
                                     <h5><a href="aboutmovies.php?id=<?php echo $m['id']; ?>" style="text-decoration:none;"><?php echo $m['title']; ?></a></h5>
                                     <h6><?php echo $m['Genre']; ?></h6>
-                                    <h6> Imdb <?php echo $m['Rating']; ?> <span class="ms-2"><i class="fa fa-star col_red me-1"></i></span> Year: 2022 <span class="ms-2">Runtime: 1h 49m</span></h6>
+                                    <h6> Imdb <?php echo $m['Rating']; ?> <span class="ms-2"><i class="fa fa-star col_red me-1"></i></span> <?php echo $m['Release_Date']; ?> <span class="ms-2">Runtime: <?php echo $m['runtime']; ?> </span></h6>
                                     <p><?php echo $m['Description']; ?></p>
-                                    <h6 class="mb-0"><a class="button" href="#"> More Info - Trailer</a></h6>
+                                    <h6 class="mb-0"><a class="button" href="<?php echo $m['Trailer']; ?>"> More Info - Trailer</a></h6>
                                 </div>
                             </div>
                         </div>
@@ -380,7 +380,7 @@ include('config.php');
  <div class="row trend_1">
   <div class="col-md-6 col-6">
    <div class="trend_1l">
-    <h4 class="mb-0"><i class="fa fa-youtube-play align-middle col_red me-1"></i> Director's  <span class="col_red">Choice</span></h4>
+    <h4 class="mb-0"><i class="fab fa-youtube-play align-middle col_red me-1"></i> Director's  <span class="col_red">Choice</span></h4>
    </div>
   </div>
   <div class="col-md-6 col-6">
@@ -559,7 +559,7 @@ include('config.php');
  <div class="row trend_1">
   <div class="col-md-12">
    <div class="trend_1l">
-    <h4 class="mb-0"><i class="fa fa-youtube-play align-middle col_red me-1"></i> Top   <span class="col_red">10 Playlist</span></h4>
+    <h4 class="mb-0"><i class="fab fa-youtube-play align-middle col_red me-1"></i> Top   <span class="col_red">10 Playlist</span></h4>
    </div>
   </div>
  </div>
@@ -694,7 +694,7 @@ Release Date: <span class="pull-right">2023</span></h6>
  <div class="row trend_1">
   <div class="col-md-6 col-6">
    <div class="trend_1l">
-    <h4 class="mb-0"><i class="fa fa-youtube-play align-middle col_red me-1"></i> Movie   <span class="col_red">Streaming Services</span></h4>
+    <h4 class="mb-0"><i class="fab fa-youtube-play align-middle col_red me-1"></i> Movie   <span class="col_red">Streaming Services</span></h4>
    </div>
   </div>
   <div class="col-md-6 col-6">

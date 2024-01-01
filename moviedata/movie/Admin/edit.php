@@ -30,9 +30,11 @@ $user = mysqli_fetch_array($result);
         <input type="hidden" value ="<?php echo $user["id"]?>" name ="id">
         <input value="<?php echo $user["title"]?>" class="form-control p-1 mt-2" type="text" placeholder="Title " name="title">
         <input value="<?php echo $user["Genre"]?>" class="form-control p-1 mt-2" type="text" placeholder="Genre " name="Genre">
-        <input value="<?php echo $user["Release_Date"]?>" class="form-control p-1 mt-2" type="text" placeholder="Release_Date " name="Release_Date">
+        <input value="<?php echo $user["Release_Date"]?>" class="form-control p-1 mt-2" type="date" placeholder="Release_Date " name="Release_Date">
         <input value="<?php echo $user["Description"]?>" class="form-control p-1 mt-2" type="text" placeholder="Description" name="Description">
-        <input value="<?php echo $user["Rating"]?>" class="form-control p-1 mt-2" type="text" placeholder="Rating" name="Rating" >
+        <input value="<?php echo $user["Rating"]?>" class="form-control p-1 mt-2" type="Number" placeholder="Rating" name="Rating" >
+        <input value="<?php echo $user["Trailer"]?>" class="form-control p-1 mt-2" type="text" placeholder="Trailer" name="Trailer" >
+        <input value="<?php echo $user["runtime"]?>" class="form-control p-1 mt-2" type="text" placeholder="runtime" name="runtime" >
         <input value="<?php echo $user["Poster"]?>" class="form-control p-1 mt-2" type="file" placeholder="Poster" name="imag">
         <input class="btn btn-dark w-100 mt-5" type="submit" name="submit">
     </form>

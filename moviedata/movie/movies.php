@@ -1,23 +1,8 @@
-<?php include('config.php');?>
+<?php include('config.php');
+include('header.php')
+?>
 
-</div>
-<style>
-	.wrap .content-top{
-		display:flex;
-		justify-content:center;
-		flex-wrap:wrap;
-		/* flex-direction:column; */
-	}
-	@media (max-width:768px) {
-		.wrap .content-top{
-			display:flex;
-			justify-content:center;
-			flex-wrap:nowrap;
-			flex-direction:column;
-		}
-		
-	}
-</style>
+<link href="css/movie.css" rel="stylesheet">
 <div class="content">
 	<div class="wrap">
 		<center><h1 style="color:#555;">(NOW SHOWING)</h1></center>
@@ -37,11 +22,11 @@
 						  		<?php
 						
 						?>
-						  		<a href="aboutmovies.php?id=<?php echo $m['id'];?>"><img src="<?php echo $m['Poster'];?>" alt="" /></a>
+						  		<a href="aboutmovies.php?id=<?php echo $m['id'];?>"><img src="./images/<?php echo $m['Poster'];?>" class="w-100" alt="" /></a>
 						  	</div>
 						  	<div class="movie-text">
 						  		<h4 class="h-text"><a href="aboutmovies.php?id=<?php echo $m['id'];?>" style="text-decoration:none;"><?php echo $m['title'];?></a></h4>
-						  		Cast: <Span class="color2" style="text-decoration:none;"><?php echo $m['Genre'];?></span><br>
+						  		Genre: <Span class="color2" style="text-decoration:none;"><?php echo $m['Genre'];?></span><br>
 						  		
 						  	</div>
 		  				</div>

@@ -1,3 +1,9 @@
+Create Database movieBooking;
+use movieBooking;
+create Table Roles(
+id INT PRIMARY KEY AUTO_INCREMENT,
+role_name varchar(200)
+);
 
 
 CREATE TABLE users (
@@ -16,6 +22,7 @@ CREATE TABLE Movies (
     Poster Varchar(200),
     Release_Date DATE,
     Description VARCHAR(500),
+    Trailer Varchar(200),
     Rating DECIMAL(5,1) -- Assuming a numeric rating, adjust precision and scale as needed
 );
 
