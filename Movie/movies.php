@@ -3,10 +3,10 @@ include('header.php')
 ?>
 
 <link href="css/movie.css" rel="stylesheet">
-<div class="content">
-	<div class="wrap">
+<div class="content container">
+	<div class="wrap ">
 		<center><h1 style="color:#555;">(NOW SHOWING)</h1></center>
-		<div class="content-top">
+		<div class="content-top row">
 			
 			<?php
           	 $today=date("Y-m-d");
@@ -16,7 +16,7 @@ include('header.php')
                    {
                     ?>
                     
-                    <div class="col_1_of_4 span_1_of_4">
+                    <div class="col-md-3 ">
 					<div class="imageRow">
 						  	<div class="single">
 						  		<?php
