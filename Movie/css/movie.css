@@ -76,7 +76,6 @@ details,
 embed,
 figure,
 figcaption,
-footer,
 header,
 hgroup,
 menu,
@@ -96,7 +95,6 @@ aside,
 details,
 figcaption,
 figure,
-footer,
 header,
 hgroup,
 menu,
@@ -509,13 +507,7 @@ p.s-img a:hover {
   font-size: 13px;
   line-height: 1.8em;
 }
-/*--Footer--*/
-.footer {
-  background: #222;
-}
-.footer-top {
-  padding: 20px 0;
-}
+
 /*  GRID OF FOUR   ============================================================================= */
 .col_1_of_4 {
   display: block;
@@ -579,23 +571,7 @@ p.txt_4 {
     padding: 4%;
   }
 }
-.footer-nav li {
-  list-style-image: url(../images/f-icon.png);
-  margin: 0 0 5px 20px;
-}
-.footer-nav li a {
-  font-size: 13px;
-  color: #666;
-  vertical-align: top;
-  line-height: 21px;
-}
-.footer-nav li a:hover {
-  color: #888;
-}
-.footer-bottom {
-  background: #111;
-  padding: 20px;
-}
+
 .copy {
   text-align: center;
 }

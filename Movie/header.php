@@ -41,12 +41,12 @@
   </div>
   <div class="col-md-4">
    <div class="top_1r text-end">
-     <ul class="social-network social-circle mb-0">
-			<li><a href="#" class="icoRss" title="Rss"><i class="fab fa-instagram"></i></a></li>
-			<li><a href="#" class="icoFacebook" title="Facebook"><i class="fab fa-facebook"></i></a></li>
-			<li><a href="#" class="icoTwitter" title="Twitter"><i class="fab fa-twitter"></i></a></li>
-			<li><a href="#" class="icoGoogle" title="Google +"><i class="fab fa-youtube"></i></a></li>
-			<li><a href="#" class="icoLinkedin" title="Linkedin"><i class="fab fa-linkedin"></i></a></li>
+     <ul class="social-network  mb-0 mx-5">
+			<li><a href="login.php" class="icoRss" title="Rss">Login<i class="fa-solid fa-user"> </i></a></li>
+    
+      
+      <li><a href="register.php" class="icoFacebook" title="Sign In">Register<i class="fa-solid fa-right-to-bracket"> </i></a></li>
+      
 		</ul>
    </div>
   </div>
@@ -147,33 +147,7 @@
 		<li class="nav-item">
           <a class="nav-link" href="movies.php">Movies</a>
         </li>
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            Blog
-          </a>
-          <ul class="dropdown-menu drop_1" aria-labelledby="navbarDropdown">
-            <li><a class="dropdown-item" href="blog.php">Blog</a></li>
-            <li><a class="dropdown-item border-0" href="blog_detail.php">Blog Detail</a></li>
-          </ul>
-        </li>
-		<li class="nav-item">
-          <a class="nav-link" href="services.php">Services</a>
-        </li>
-		<li class="nav-item">
-          <a class="nav-link" href="team.php">Team</a>
-        </li>
-		<li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            Pages
-          </a>
-          <ul class="dropdown-menu drop_1" aria-labelledby="navbarDropdown">
-            <li><a class="dropdown-item" href="about.php">About Us</a></li>
-            <li><a class="dropdown-item" href="services.php">Services</a></li>
-			<li><a class="dropdown-item" href="team.php">Team</a></li>
-            <li><a class="dropdown-item border-0" href="contact.php">Contact</a></li>
-          </ul>
-        </li>
-		
+        
 		<li class="nav-item">
           <a class="nav-link" href="contact.php">Contact Us</a>
         </li>

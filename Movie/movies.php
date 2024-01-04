@@ -1,5 +1,6 @@
 <?php include('config.php');
 include('header.php')
+
 ?>
 
 <link href="css/movie.css" rel="stylesheet">
@@ -39,3 +40,10 @@ include('header.php')
 			</div>
 				<div class="clear"></div>		
 			</div>
+		</div>
+
+			<?php 
+			include "footer.php"
+
+
+			?>
