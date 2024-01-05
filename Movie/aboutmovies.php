@@ -68,7 +68,7 @@ if ($movie) {
 
                                                         if ($ttme) {
                                                             ?>
-                                                            <a href="check_login.php?show=<?php echo $shh['id']; ?>&movie=<?php echo $shh['movie_id']; ?>&theatre=<?php echo $theaterId; ?>"><button class="btn btn-danger text-white"><?php echo date('h:i A', strtotime($ttme['showdatetime'])); ?></button></a>
+                                                            <a href="bCh.php?show=<?php echo $shh['id']; ?>&movie=<?php echo $shh['movie_id']; ?>&theatre=<?php echo $theaterId; ?>"><button class="btn btn-danger text-white " ><?php echo date('h:i A', strtotime($ttme['showdatetime'])); ?></button></a>
                                                     <?php
                                                         }
                                                     }

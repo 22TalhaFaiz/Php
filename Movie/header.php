@@ -1,3 +1,8 @@
+<?php
+session_start();
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,7 +12,7 @@
 	<title>Movie Booking</title>
 	<link href="css/bootstrap.min.css" rel="stylesheet" >
 	<link href="css/font-awesome.min.css" rel="stylesheet" >
-	<link href="css/global.css" rel="stylesheet">
+	<link href="css/main.css" rel="stylesheet">
 	<link href="css/index.css" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css2?family=Rajdhani&display=swap" rel="stylesheet">
 	<script src="js/bootstrap.bundle.min.js"></script>
@@ -17,6 +22,10 @@
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
         integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.9.2/umd/popper.min.js" integrity="sha512-2rNj2KJ+D8s1ceNasTIex6z4HWyOnEYLVC3FigGOmyQCZc2eBXKgOxQmo3oKLHyfcj53uz4QMsRCWNbLd32Q1g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+
 </head>
 <body>
 
@@ -40,17 +49,33 @@
    </div>
   </div>
   <div class="col-md-4">
-   <div class="top_1r text-end">
-     <ul class="social-network  mb-0 mx-5">
-			<li><a href="login.php" class="icoRss" title="Rss">Login<i class="fa-solid fa-user"> </i></a></li>
-    
-      
-      <li><a href="register.php" class="icoFacebook" title="Sign In">Register<i class="fa-solid fa-right-to-bracket"> </i></a></li>
-      
-		</ul>
-   </div>
-  </div>
- </div>
+    <div class="top_1r text-end">
+        <ul class=" mb-0 mx-5">
+            <?php 
+            if(isset($_SESSION['user_id'])){
+            ?>
+				<li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+		  <?php echo $_SESSION['user_name']?>
+          </a>
+                <ul class="dropdown-menu">
+                    <li><a href="#">My Profile</a></li>
+                    <li><a href="#">Settings</a></li>
+                    <li><a href="logout.php">Log Out</a></li>
+                </ul>
+            </li>
+            <?php
+            } else {
+            ?>
+            <li><a href="login.php">Login</a></li>
+            
+			<li><a href="register.php" class="icoFacebook" title="Sign In">Register<i class="fa-solid fa-right-to-bracket"></i></a></li>
+            <?php
+            }?>
+        </ul>
+    </div>
+</div>
+
 </div>
 
 
@@ -97,7 +122,7 @@
 					 <div class="card-body">
 					<h5 class="card-title">${i.Title}</h5>
 					<p class="card-text">${i.Year}</p>
-					<button data-bs-toggle="modal" id='${i.imdbID}'data-bs-target="#exampleModal" onclick="detail(this)" class="btn btn-primary">Watch Here</button>
+					<button data-bs-toggle="modal" id='${i.imdbID}' data-bs-target="#exampleModal" onclick="detail(this)" class="btn btn-primary watch-button">Watch Here</button>
 					</div>
 					</div>`
 
