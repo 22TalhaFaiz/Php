@@ -128,7 +128,7 @@ include('config.php');
                                     <div class="popular_2i1lm1 clearfix">
                                         <div class="grid">
                                             <figure class="effect-jazz mb-0">
-                                                <a href="aboutmovies.php?id=<?php echo $m['id']; ?>"><img src="./images/<?php echo $m['Poster']; ?>" class="w-100" alt="" /></a>
+                                                <a href="aboutmovies.php?id=<?php echo $m['id']; ?>"><img src="./images/<?php echo $m['Poster']; ?>" class="w-100" height="250" alt="" /></a>
                                             </figure>
                                         </div>
                                     </div>
@@ -197,7 +197,7 @@ include('config.php');
                 while ($m = mysqli_fetch_array($qry2)) {
                 ?>
 				  <figure class="effect-jazz mb-0">
-				  <a href="aboutmovies.php?id=<?php echo $m['id']; ?>"><img src="./images/<?php echo $m['Poster']; ?>" height="515" class="w-100"  alt="abc"></a>
+				  <a href="aboutmovies.php?id=<?php echo $m['id']; ?>"><img src="./images/<?php echo $m['Poster']; ?>" height="450" class="w-75"  alt="abc"></a>
 				  </figure>
 			  </div>
    </div>

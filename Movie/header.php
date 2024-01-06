@@ -48,32 +48,7 @@ session_start();
 
    </div>
   </div>
-  <div class="col-md-4">
-    <div class="top_1r text-end">
-        <ul class=" mb-0 mx-5">
-            <?php 
-            if(isset($_SESSION['user_id'])){
-            ?>
-				<li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-		  <?php echo $_SESSION['user_name']?>
-          </a>
-                <ul class="dropdown-menu">
-                    <li><a href="#">My Profile</a></li>
-                    <li><a href="#">Settings</a></li>
-                    <li><a href="logout.php">Log Out</a></li>
-                </ul>
-            </li>
-            <?php
-            } else {
-            ?>
-            <li><a href="login.php">Login</a></li>
-            
-			<li><a href="register.php" class="icoFacebook" title="Sign In">Register<i class="fa-solid fa-right-to-bracket"></i></a></li>
-            <?php
-            }?>
-        </ul>
-    </div>
+
 </div>
 
 </div>
@@ -158,26 +133,53 @@ session_start();
 </section>
 
 <section id="header">
-<nav class="navbar navbar-expand-md navbar-light" id="navbar_sticky">
-  <div class="container">
-    <a class="navbar-brand text-white fw-bold" href="index.html"><i class="fa fa-video-camera col_red me-1"></i> Movie Booking</a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav mb-0">
-        <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="index.php">Home</a>
-        </li>
-		<li class="nav-item">
-          <a class="nav-link" href="movies.php">Movies</a>
-        </li>
-        
-		<li class="nav-item">
-          <a class="nav-link" href="contact.php">Contact Us</a>
-        </li>
-      </ul>
+  <nav class="navbar navbar-expand-md navbar-light" id="navbar_sticky">
+    <div class="container">
+      <a class="navbar-brand text-white fw-bold" href="index.html"><i class="fa fa-video-camera col_red me-1"></i> Movie Booking</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mb-0">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="index.php">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="movies.php">Movies</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="contact.php">Contact Us</a>
+          </li>
+        </ul>
+        <div class="ms-auto"> 
+          <ul class="navbar-nav mb-0">
+            <?php 
+            if(isset($_SESSION['user_id'])){
+            ?>
+            <li class="nav-item dropdown">
+			<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            <?php echo $_SESSION['user_name']?>
+          </a>
+		  <ul class="dropdown-menu drop_1" aria-labelledby="navbarDropdown">
+		  <li><a href="#">My Profile</a></li>
+                <li><a href="#">Settings</a></li>
+                <li><a href="logout.php">Log Out</a></li>
+          </ul>
+            </li>
+            <?php
+            } else {
+            ?>
+             <li class="nav-item">
+            <a class="nav-link" href="Login.php">Login</a>
+          </li>
+		  <li class="nav-item">
+            <a class="nav-link" href="register.php">Register</a>
+          </li>
+            <?php
+            }?>
+          </ul>
+        </div>
+      </div>
     </div>
-  </div>
-</nav>
+  </nav>
 </section>
