@@ -72,8 +72,8 @@
 <span>Movie</span>
 </a>
 <ul>
-<li><a href="movielist.php">List</a></li>
-<li><a href="addMovie.php">Add new</a></li>
+<li><a href="../movielist.php">List</a></li>
+<li><a href="../addMovie.php">Add new</a></li>
 </ul>
 </li>
 <li class>
@@ -84,8 +84,8 @@
 <span>Theatre</span>
 </a>
 <ul>
-<li><a href="theatre/theatrelist.php">List</a></li>
-<li><a href="theatre/addTheatre.php">Add new</a></li>
+<li><a href="../theatre/theatrelist.php">List</a></li>
+<li><a href="../theatre/addTheatre.php">Add new</a></li>
 </ul>
 </li>
 <li class>
@@ -101,7 +101,7 @@
 </ul>
 </li>
 <li class>
-<a href="../" aria-expanded="false">
+<a href="/Movie" aria-expanded="false">
 <div class="icon_menu">
 <img src="img/menu-icon/6.svg" alt>
 </div>

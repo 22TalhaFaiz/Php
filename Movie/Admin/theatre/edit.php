@@ -9,7 +9,8 @@ if(!isset($_SESSION['user_id'])){
 
 include("../config.php");
 include("header.php");
-$query = "SELECT * FROM theater";
+$id = $_GET["editid"];
+$query = "SELECT * FROM theater where id =  $id ";
 $result = mysqli_query($conn, $query);
 $user = mysqli_fetch_array($result);
 ?>

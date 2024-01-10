@@ -32,6 +32,10 @@
                 </div>
                 <br>
                 <div class="col-md-12 form-group mt-3 mt-md-0">
+                  <input type="number" class="form-control" name="age" id="email" placeholder="Enter Age" required>
+                </div>
+                <br>
+                <div class="col-md-12 form-group mt-3 mt-md-0">
                     <input type="hidden" class="form-control" name="role_id" value="2" required>
                 </div>
               </div>
@@ -51,9 +55,10 @@
       $name = $_POST['user_name'];
       $email = $_POST['user_email'];
       $password = $_POST['user_password'];
+      $age = $_POST['age'];
       $role_id = $_POST['role_id'];
 
-      $query = "Insert into users (user_name, user_email, user_password,  role_id) values ('$name','$email','$password','$role_id')";
+      $query = "Insert into users (user_name, user_email, user_password,  role_id, age) values ('$name','$email','$password','$role_id','$age')";
 
       $result = mysqli_query($conn, $query);
       echo "<script>location.href = 'login.php';</script>";

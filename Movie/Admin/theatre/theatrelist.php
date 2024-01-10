@@ -68,7 +68,7 @@ if(!isset($_SESSION['user_id'])){
         <td><?php echo $data["Location"]; ?></td>
         <td><?php echo $data["Capacity"]; ?></td>
         <td><?php echo $data["Class"]; ?></td>
-        <td><a href="edit.php?id=<?php echo $data["id"]; ?>"><i class="fa fa-pen" style="color:green;"></i></a></td>
+        <td><a href="edit.php?editid=<?php echo $data["id"]; ?>"><i class="fa fa-pen" style="color:green;"></i></a></td>
         <td><a href="delete.php?id=<?php echo $data["id"]; ?>"><i class="fa fa-trash" aria-hidden="true" style="color:red;"></i></a></td>
     </tr>
     <?php
