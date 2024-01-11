@@ -9,7 +9,8 @@ session_start();
       $user_email = $_POST['user_email'];
       $user_password = $_POST['user_password'];
 
-      $query = "SELECT * from users where user_email = '$user_email' AND user_password = '$user_password'";
+      $query = "SELECT * FROM users WHERE user_email = '$user_email' AND user_password = '$user_password' AND role_id = 1";
+
 
       $result = mysqli_query($conn, $query);
       $data = mysqli_fetch_array($result);
@@ -20,7 +21,7 @@ session_start();
       }
       else{
           echo "<div class='alert alert-danger w-75 mt-5 mx-auto' role='alert'>
-          Username or password is incorrect
+          Username or password is incorrect 
         </div>";
       }
     
@@ -71,7 +72,7 @@ session_start();
       <div class="container" data-aos="fade-up">
 
         <div class="section-header text-center mt-5">
-          <h2>Login</h2>
+          <h2>Admin Login</h2>
           <p></p>
         </div>
 

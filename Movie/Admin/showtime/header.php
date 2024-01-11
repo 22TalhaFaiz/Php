@@ -229,7 +229,7 @@
 <a href="#">Settings</a>
 <?php
 }?>
-<a href="logout.php">Log Out </a>
+<a href="../logout.php">Log Out </a>
 </div>
 </div>
 </div>

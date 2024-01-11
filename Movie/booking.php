@@ -22,9 +22,12 @@ include('config.php');
 									<img src="./images/<?php echo $movie['Poster']; ?>" alt=""/>
 								</div>
 								<div class="desc span_3_of_2">
-									<p class="p-link" style="font-size:15px"><b>Cast : </b><?php echo $movie['runtime']; ?></p>
+								<p class="p-link" style="font-size:15px"><b>Cast : </b><?php echo $movie['cast']; ?></p>
+									<p class="p-link" style="font-size:15px"><b>Runtime : </b><?php echo $movie['runtime']; ?></p>
+									<p class="p-link" style="font-size:15px"><b>Genre : </b><?php echo $movie['Genre']; ?></p>
 									<p class="p-link" style="font-size:15px"><b>Release Date : </b><?php echo date('d-M-Y',strtotime($movie['Release_Date'])); ?></p>
 									<p style="font-size:15px"><?php echo $movie['Description']; ?></p>
+									<p class="p-link" style="font-size:15px"><b>Director : </b><?php echo $movie['director']; ?></p>
 									<a href="<?php echo $movie['Trailer']; ?>" target="_blank" class="watch_but">Watch Trailer</a>
 								</div>
 								<div class="clear"></div>
